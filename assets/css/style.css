@@ -2,11 +2,21 @@ html{
     font-size:62.5%;
 }
 
+@font-face {
+    font-family: "Mix";
+    src: url("../fonts/The\ Mix-\ Regular.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ Bold.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ Italic.ttf") format("ttf"),
+        url("../fonts/The\ Mix-\ ItalicBold.ttf") format("ttf");
+         
+  }
+
 body{
     margin:0;
     padding:0;
     font-family: 'Mix',Arial,sans-serif;
-    background-color:#d5d7cd;
+    /*background-color:#F7F7F5;*/
+    font-size:1.8rem;
 }
 *,
 *:before,
@@ -16,4 +26,24 @@ body{
 
 h1,h2,h3,h4,h5,h6{
     margin:0;
+}
+
+.wrapper{
+    display:grid;
+    width:39rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    margin:0 auto;
+    grid-template-areas: ". menu .";
+}
+
+.menu{
+    grid-area:menu;
+    height:6rem;
+    background-color:#fff;
+    display:flex;
+    align-items: center;
+}
+.navMenu{
+    font-family: 'Mix',Arial,sans-serif;
+    font-weight: 400;
 }
