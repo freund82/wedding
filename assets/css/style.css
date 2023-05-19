@@ -144,6 +144,8 @@ p{
 
 .logoName{
     font-size:3rem;
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 3px;
 }
 
 .fa-angle-double-down{
