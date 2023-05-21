@@ -25,10 +25,25 @@ html{
     src: url("../fonts/The Mix- Bold.ttf") format('truetype');
   }
 
+  @font-face {
+    font-family: 'Futura PT';
+    src:url('FuturaPT-LightObl.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root{
+    --main-text-font-family:'Lora', serif;
+    --icons-text-font-family:'Futura PT, Arial, san-serif';
+    --logoletters-font-family:'Luxurious Script', cursive;
+    --namestext-font-family:'Playfair Display SC', serif;
+    --cursivetitles-font-family:'Comforter Brush', cursive;
+}
+
 body{
     margin:0;
     padding:0;
-    font-family: 'Lora', serif;
+    font:var(--main-text-font-family);
     background-color:#F7F7F5;
     font-size:1.8rem;
 }
@@ -51,12 +66,19 @@ p{
     width:39rem;
     grid-template-columns: 2rem 1fr 2rem;
     margin:0 auto;
-    grid-template-areas: "menu menu menu"
-                         "mainBlock mainBlock mainBlock";
+    grid-template-areas: "mainBlock mainBlock mainBlock"
+                         ". newEra ."
+                         "invitation invitation invitation"
+                         ". calender ."
+                         "mapBlock mapBlock mapBlock";
 }
 
+
+
+/*Menu*/
+
 .menu{
-    grid-area:menu;
+    width:39rem;
     height:6rem;
     background-color:#fff;
     display:flex;
@@ -64,6 +86,8 @@ p{
     justify-content: space-between;
     padding:0 2rem 0 2rem;
     box-shadow: 0rem 0.2rem 0.2rem rgba(184, 180, 180, 0.3);
+    position:fixed;
+    z-index:10000;
 }
 .navMenu{
     line-height:2.8rem;
@@ -71,20 +95,33 @@ p{
 
 .iconsBlock{
     display:flex;
+    align-items: center;
+    margin-top:0.5rem;
 }
 
 .musciBlock{
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-right:1.5rem;
 }
 .musicButton{
     width:2.5rem;
-    margin-bottom:0.3rem;
+    height:2.5rem;
+    margin-bottom:0.2rem;
+    cursor:pointer;
+}
+
+.musicButton-title{
+    font-family: var(--icons-text-font-family);
+    font-size:1rem;
+    line-height:0;
+    margin-top:1.2rem;
 }
 
 .burgerMenu{
     cursor:pointer;
+    padding-top:0.3rem;
 }
 .burger-icon{
     display:block;
@@ -97,18 +134,19 @@ p{
 .burgerMenu-icons{
     display:flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .burgerMenu-items{
     display:none;
 }
 
+/*Title*/
+
 .mainBlock{
    grid-area:mainBlock;
    background-image: url("../images/main.png");
    background-size: 140%;
-   background-position:-5rem 2rem;
+   background-position:-5rem 9rem;
    background-repeat: no-repeat;
    width:100%;
    height:100vh;
@@ -120,7 +158,7 @@ p{
 
 .mainBlock-text{
     position:absolute;
-    top:22%;
+    top:30%;
     left:12%;
     width:30rem;
     height:30rem;
@@ -137,22 +175,199 @@ p{
 }
 
 .logo{
-    font-family: 'Luxurious Script', cursive;
+    font-family: var(--logoletters-font-family);
     font-size:10rem;
     font-weight:100;
+    margin-top:-2rem;
+    animation-name: scaleText;
+    animation-duration: 2s;
+}
+
+@keyframes scaleText{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
 }
 
 .logoName{
     font-size:3rem;
-    font-family: 'Playfair Display SC', serif;
+    font-family: var(--namestext-font-family);
     letter-spacing: 3px;
+    opacity:0;
+    animation: scaleTextTitle 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes scaleTextTitle{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.date{
+    opacity:0;
+    animation: scaleTextDate 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes scaleTextDate{
+    from{transform:scale(1.65); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+.mainBlock-text :last-child{
+    margin-top:2rem;
+}
+
+.symbol{
+    font-size:2.5rem;
+    color:#9A9A98;
 }
 
 .fa-angle-double-down{
     font-size:2rem;
     position:absolute;
-    bottom:10%;
+    bottom:3%;
     left:50%;
     transform:translateX(-50%);
     z-index:1000;
+}
+
+/*New Era*/
+.newEra{
+    grid-area: newEra;
+    text-align: center;
+    font-family: var(--cursivetitles-font-family);
+    font-size: 5rem;;
+}
+
+.endBlockImage{
+    display:block;
+    margin:0 auto;
+    width:17.8rem;
+    margin-top:3rem;
+}
+
+/*Invitation*/
+
+.invitation{
+    grid-area: invitation;
+    overflow: hidden;
+    position:relative;
+    z-index:100;
+}
+
+.invitationBackgroundImage{
+    width:120%;
+    transform:rotate(-30deg) translateX(-11rem) translateY(-9rem);
+    opacity:0.2;
+}
+
+.invitationFlowers{
+    width:130%;
+    overflow-x: hidden;
+    transform:rotate(145deg) translateY(8rem) translateX(-8rem);
+}
+
+.invitationTitle{
+    position:absolute;
+    top:8%;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    z-index:1000;
+}
+
+.invitationText{
+    width:30rem;
+    position:absolute;
+    top:33%;
+    left:50%;
+    transform: translateX(-50%);
+    display:block;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
+    z-index:1000;
+}
+
+.finishedText{
+    top:52%;
+}
+
+.dateText{
+    width:30rem;
+    top:58%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.placeText{
+    top:70%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:1.8rem;
+}
+
+
+/*Calender*/
+.calender{
+    grid-area:calender;
+    position: relative;
+    z-index:100;
+}
+
+.calenderTitle{
+    margin-top:5rem;
+    margin-bottom:3rem;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.calenderDays{
+    width:75%;
+    margin: 0 auto;
+    text-align: end;
+    line-height: 1.5;
+}
+
+.calenderRow{
+    position: relative;
+    left:-2%;
+}
+
+.calenderHeart{
+    width:4.6rem;
+    position:absolute;
+    top:40%;
+    right:20%;
+    z-index:1000;
+}
+
+.calenderEndBlockImage{
+    display:block;
+    margin:0 auto;
+    width:17.8rem;
+    margin-top:8rem;
+}
+
+/*Map*/
+.mapBlock{
+    grid-area:mapBlock;
+}
+
+.mapText{
+    display:block;
+    width:32rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
 }
