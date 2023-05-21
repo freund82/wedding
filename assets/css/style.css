@@ -70,7 +70,10 @@ p{
                          ". newEra ."
                          "invitation invitation invitation"
                          ". calender ."
-                         "mapBlock mapBlock mapBlock";
+                         "mapBlock mapBlock mapBlock"
+                         ". style ."
+                         "happyWait happyWait happyWait"
+                         "timerBlock timerBlock timerBlock";
 }
 
 
@@ -78,7 +81,7 @@ p{
 /*Menu*/
 
 .menu{
-    width:39rem;
+    width:100%;
     height:6rem;
     background-color:#fff;
     display:flex;
@@ -370,4 +373,230 @@ p{
     line-height:2.1rem;
     letter-spacing: 1.5px;
     margin-bottom:2rem;
+}
+
+.mapSection{
+    box-shadow: 0rem 0.5rem 0.5rem rgba(184, 180, 180, 0.3);
+}
+
+/*Style*/
+.style{
+    grid-area:style;
+    margin-bottom:2rem;
+}
+
+.styleTitle{
+    margin-top:5rem;
+    margin-bottom:3rem;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.styleText{
+    width:26rem;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2rem;
+}
+
+.styleIconsBlock{
+    width:25.8rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    margin-top:5rem;
+}
+
+.styleIcon{
+    display:block;
+    margin: 0 auto;;
+    width:7rem;
+    margin-bottom:3rem;
+}
+
+.styleIconBlock{
+    width:12.9rem;
+}
+.iconText{
+    width:12.9rem;
+    font-size:1.2rem;
+    line-height:1.2;
+}
+
+.styleTitleColorsText{
+    width:26rem;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    font-size:1.5rem;
+    line-height:2.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom:2.5rem;
+}
+
+.styleColors{
+    text-align: center;
+}
+
+.styleBlack{
+    display:inline-block;
+    margin:0 auto;
+    width:5.5rem;
+    height:5.5rem;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right:2.5rem;
+}
+
+.styleWhite{
+    display:inline-block;
+    margin:0 auto;
+    width:5.5rem;
+    height:5.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/*HappyWaitText*/
+.happyWait{
+    grid-area:happyWait;
+    position:relative;
+    z-index:100;
+    overflow:hidden;
+}
+
+.happyWaitFirstLine{
+    position:absolute;
+    top:13%;
+    left:50%;
+    transform:translateX(-50%);
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border-color:#9b9a9a;
+    z-index:1000;
+}
+
+.happyWaitText{
+    text-align:center;
+    width:30rem;
+    position: absolute;
+    top:28%;
+    left:50%;
+    transform:translateX(-50%);
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    line-height:1;
+    z-index:1000;
+}
+
+.happyWaitSecondLine{
+    position:absolute;
+    bottom:30%;
+    left:50%;
+    transform:translateX(-50%);
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border-color:#9b9a9a;
+    z-index:1000;
+}
+
+/*Timer Block*/
+
+.timerBlock{
+   margin-top:-5rem;
+   grid-area:timerBlock;
+   background-image: url("../images/pair2.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   width:100%;
+   height:100vh;
+   position:relative;
+   z-index:100;
+}
+
+.timer{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color:#fff;
+    z-index:1000;
+}
+
+.timerDate{
+    font-size:2.5rem;
+    text-transform: uppercase;
+    font-weight:400;
+}
+
+.timerNumbers{
+    display:flex;
+    justify-content: space-between;
+    font-size:2.5rem;
+}
+
+.timerNumbersItems{
+    border-right:0.1rem solid #fff;
+}
+
+.timerNumbers :last-child{
+    border-right:none;
+}
+
+/*MEDIA*/
+
+@media(min-width:768px){
+    .wrapper{
+        width:76.8rem;
+    }
+
+    .menu{
+        width:100%;
+    }
+
+    .mainBlock{
+        grid-area:mainBlock;
+        background-image: url("../images/main.png");
+        background-size: 140%;
+        background-position:-11rem 9rem;
+        background-repeat: no-repeat;
+        width:100%;
+        height:100vh;
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        z-index:100;
+     }
+
+     .mainBlock-text{
+        position:absolute;
+        top:44%;
+        left:20%;
+        width:47rem;
+        height:47rem;
+        border-radius:50%;
+        margin:0 auto;
+        background-color:#F7F7F5;
+        outline: 1.3rem solid rgba(228, 227, 227, 0.5);
+        z-index:1000;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height:1.1;
+    }
 }
