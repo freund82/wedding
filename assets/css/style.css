@@ -376,7 +376,9 @@ p{
 }
 
 .mapSection{
+    display:flex;
     box-shadow: 0rem 0.5rem 0.5rem rgba(184, 180, 180, 0.3);
+    justify-content: space-around;
 }
 
 /*Style*/
