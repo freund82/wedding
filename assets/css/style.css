@@ -73,7 +73,8 @@ p{
                          "mapBlock mapBlock mapBlock"
                          ". style ."
                          "happyWait happyWait happyWait"
-                         "timerBlock timerBlock timerBlock";
+                         "timerBlock timerBlock timerBlock"
+                         "weddingManagerBlock weddingManagerBlock weddingManagerBlock";
 }
 
 
@@ -597,3 +598,41 @@ p{
     margin-bottom:1rem;
 }
 
+
+/*Wedding manager*/
+
+.weddingManagerBlock{
+    grid-area:weddingManagerBlock;
+    height:100vh;
+    position:relative;
+    margin-top:3rem;
+    z-index:100;
+    overflow: hidden;
+}
+
+.weddingManagerBackground{
+    position:absolute;
+    top:-2rem;
+    left:6rem;
+    width:125%;
+    height:auto;
+    transform:rotate(30deg);
+    opacity:0.2;
+    z-index:-1;
+}
+
+.weddingManagerBlockLine{
+    display:block;
+    margin-top:8rem;
+    width:10rem;
+    height:0.1rem;
+    background-color:#000;
+    border-color:#000;
+}
+
+.weddingManagerTitle{
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
