@@ -51,7 +51,7 @@
                         <p class="logoName">Милена</p>
                         <p class="logoName date">15.07.2023</p>
                 </div>
-                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-down arrowTop" aria-hidden="true"></i>
             </section>
             <!--Окончание Title Block-->
             <!--New Era-->
@@ -198,8 +198,50 @@
             <!--Wedding manager Блок-->
             <section class="weddingManagerBlock">
                 <img class="weddingManagerBackground" src="./assets/images/flowers.png" alt="flowers">
-                <hr class="weddingManagerBlockLine">
-                <p class="weddingManagerTitle">Свадебный организатор</p>
+                    <hr class="weddingManagerBlockLine">
+                    <p class="weddingManagerTitle">Свадебный организатор</p>
+                    <p class="weddingText">По всем вопросам в день мероприятия обращайтесь к нашему организатору</p>
+                    <p class="weddingText nameText">Елена</p>
+                    <p class="weddingText phoneText">+7 900 025-51-55</p>
+                    <img class="calenderEndBlockImage" src="./assets/images/endBlock.png" alt="flowers">
+            </section>
+            <!--Окончание Wedding manager Блок-->
+            <!--Form Block-->
+            <section class="formBlock">
+                <p class="formTitleText">Подтвердите, пожалуйста, своё пристутсвие на торжестве!</p>
+                <p class="formTitleText responceDateText">Будем ждать ответ до 01.06.2023 г.</p>
+                <i class="fa fa-angle-double-down arrowDown" aria-hidden="true"></i>
+                <form id="form">
+                    <div>
+                        <label class="labelSurname" for="surname">Ваша фамилия:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                    <div>
+                        <label for="name">Ваше имя (укажите все имена гостей и возраст детей):</label>
+                        <textarea type="text" id="name" name="name" placeholder="Например: Иван и Анна, дети София 8 лет и Артур 5лет" required></textarea>
+                    </div>
+                    <div class="choiceOption">
+                        <label for="choice">Присутствие:</label>
+                        <div>
+                            <input type="radio" id="choiceYes" name="choiceYes">
+                            <label class="choiceLabel" for="choicePresense">Я (мы) с удовольствием приду (придем)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="choiceNo" name="choiceNo">
+                        <label class="choiceLabel" for="choicePresense">К сожалению, не смогу (не сможем) присутствовать</label>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="btn" type="submit">Отправить</button> 
+                    </div>
+                </form>
+                <img class="calenderEndBlockImage" src="./assets/images/endBlock.png" alt="flowers">
+                <p class="formBlockFinishedText">Будем рады видеть вас на нашем празднике!</p>
+                <p class="formBlockTextNames">Егор и Милена</p>
+                
+            </section>
+            <section class="centerEndBlockFlowers">
+                <img class="formEndBlockFlowers" src="./assets/images/centerFlowers.png" alt="flowers">
             </section>
         </div>
         <script src="https://kit.fontawesome.com/7a584bd250.js" crossorigin="anonymous"></script>
