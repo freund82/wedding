@@ -50,3 +50,18 @@ var x=setInterval(function(){
 
 
 }, 1000)
+
+
+/*Form Submit*/
+
+let choiceForm=document.getElementById("form");
+let choiceYes=document.getElementById("choiceYes");
+let choiceNo=document.getElementById("choiceNo");
+
+choiceForm.addEventListener("submit", function(e) {
+console.log(e)
+    if (choiceYes.value=="false" && !choiceNo.value) {
+      e.preventDefault();
+      alert("Пожалуйста, заполните все обязательные поля");
+    }
+  });
