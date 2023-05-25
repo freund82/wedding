@@ -11,6 +11,9 @@ function changeImage() {
     }
 }
 
+
+/*Burger menu*/
+
 /*var countDownDate=new Date("July 15, 2023 15:30:00 GMT+0500").getTime()+18000000*/
 
 var countDownDate=new Date("July 15, 2023 13:30:00").getTime()
@@ -52,16 +55,6 @@ var x=setInterval(function(){
 }, 1000)
 
 
-/*Form Submit*/
 
-let choiceForm=document.getElementById("form");
-let choiceYes=document.getElementById("choiceYes");
-let choiceNo=document.getElementById("choiceNo");
 
-choiceForm.addEventListener("submit", function(e) {
-console.log(e)
-    if (choiceYes.value=="false" && !choiceNo.value) {
-      e.preventDefault();
-      alert("Пожалуйста, заполните все обязательные поля");
-    }
-  });
+  

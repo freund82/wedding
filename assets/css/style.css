@@ -71,6 +71,7 @@ p{
                          "invitation invitation invitation"
                          ". calender ."
                          "mapBlock mapBlock mapBlock"
+                         "programmBlock programmBlock programmBlock"
                          ". style ."
                          "happyWait happyWait happyWait"
                          "timerBlock timerBlock timerBlock"
@@ -390,6 +391,161 @@ p{
     display:flex;
     box-shadow: 0rem 0.5rem 0.5rem rgba(184, 180, 180, 0.3);
     justify-content: space-around;
+    margin-bottom:8rem;
+}
+
+/*Programm*/
+
+.programmBlock{
+    grid-area:programmBlock;
+    position:relative;
+    z-index:100;
+    overflow: hidden;
+}
+
+.programmBlockFlowers{
+    position:absolute;
+    top:-2rem;
+    left:6rem;
+    width:125%;
+    height:auto;
+    transform:rotate(30deg);
+    opacity:0.2;
+    z-index:-1;
+}
+
+.programmBlockFlowersColor{
+    width:125%;
+    height:auto;
+    opacity:0.9;
+}
+
+.programmBlockLine{
+    width:10rem;
+    height:0.05rem;
+    border:none;
+    background-color:#000;
+    margin-bottom:8rem;
+}
+
+.programmBlockTitle{
+    width:30rem;
+    text-align: center;
+    margin:0 auto;
+    font-family: var(--cursivetitles-font-family);
+    font-size:5rem;
+    letter-spacing: 5px;
+    margin-bottom:4rem;
+}
+
+.programBlockIcons{
+    position:relative;
+    display:flex;
+    justify-content: space-around;
+    z-index:100;
+}
+
+.programBlockLine{
+    position:absolute;
+    height:68rem;
+    width:0.1rem;
+    border-color: #000;
+    top:13%;
+    left:50%;
+    z-index:1000;
+}
+
+.heart{
+    position:absolute;
+    top:13%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartSecond{
+    position:absolute;
+    top:33%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartThird{
+    position:absolute;
+    top:53%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartFourth{
+    position:absolute;
+    top:73%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.heartFifth{
+    position:absolute;
+    top:91%;
+    left:48.5%;
+    width:1.4rem;
+    height:1.295rem;
+    z-index:1000;
+}
+
+.programBlockColumn{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10rem;
+}
+
+.second{
+    padding-top:16rem;
+    padding-bottom:13rem;
+    justify-content: space-around;
+}
+
+.programmBlockItem{
+    width:14rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programmBlockIcon{
+    width:9rem;
+    height:9rem;
+    border-radius:50%;
+    margin-bottom:1.2rem;
+}
+
+.programmBlockItemTitle{
+    width:14rem;
+    font-size:2.8rem;
+    text-align: center;
+    margin-bottom:1.3rem;
+}
+
+.programmBlockItemTextTitle{
+    width:13.5rem;
+    font-size:1.5rem;
+    text-align: center;
+    font-family: var(--namestext-font-family);
+    margin-bottom:1rem;
+}
+
+.programmBlockItemText{
+    font-size:1.4rem;
+    font-style: italic;
+    text-align: center;
 }
 
 /*Style*/
@@ -512,6 +668,7 @@ p{
     width:10rem;
     height:0.1rem;
     background-color:#000;
+    border:none;
     border-color:#9b9a9a;
     z-index:1000;
 }
@@ -537,6 +694,7 @@ p{
     width:10rem;
     height:0.1rem;
     background-color:#000;
+    border:none;
     border-color:#9b9a9a;
     z-index:1000;
 }
@@ -629,6 +787,7 @@ p{
     width:10rem;
     height:0.1rem;
     background-color:#000;
+    border:none;
     border-color:#000;
     margin-bottom:6rem;
 }
@@ -797,5 +956,5 @@ p{
     position:absolute;
     bottom:-13rem;
     left:-5.5rem;
-    z-index:-1;
+    z-index:100;
 }
