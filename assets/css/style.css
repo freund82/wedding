@@ -1,5 +1,6 @@
 html{
     font-size:62.5%;
+    scroll-behavior: smooth;
 }
 
 /*@font-face {
@@ -100,6 +101,11 @@ p{
     line-height:2.8rem;
 }
 
+.navMenuTitle{
+    text-decoration: none;
+    color:#000;
+}
+
 .iconsBlock{
     display:flex;
     align-items: center;
@@ -144,9 +150,42 @@ p{
 }
 
 .burgerMenu-items{
-    display:none;
+    position:absolute;
+    top:0;
+    left:100%;
+    visibility: hidden;
+    width:30rem;
+    height:100vh;
+    z-index:1200;
+    background-color:#fff;
+    padding-top:4.2rem;
+    transition: left .3s;
 }
 
+.open{
+    visibility: visible;
+    left:23%;
+}
+
+.burgerMenu-itemsText{
+    list-style: none;
+    font-size:1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height:2;
+}
+
+li>a{
+    color:#000;
+    text-decoration: none;
+}
+
+.active{
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;;
+    color:#4d4d4d;
+    opacity:0.8;
+}
 /*Title*/
 
 .mainBlock{

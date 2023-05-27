@@ -14,6 +14,29 @@ function changeImage() {
 
 /*Burger menu*/
 
+var links = document.querySelectorAll(".burgerMenu-items a");
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    var target = document.querySelector(this.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.remove("active");
+    }
+    this.classList.add("active");
+  });
+}
+
+var burgerMenu=document.querySelector(".burgerMenu")
+var menu = document.querySelector(".burgerMenu-items");
+
+function toggleMenu(){
+    menu.classList.toggle("open")
+}
+
+burgerMenu.addEventListener("click", toggleMenu)
+
 /*var countDownDate=new Date("July 15, 2023 15:30:00 GMT+0500").getTime()+18000000*/
 
 var countDownDate=new Date("July 15, 2023 13:30:00").getTime()
@@ -55,6 +78,3 @@ var x=setInterval(function(){
 }, 1000)
 
 
-
-
-  

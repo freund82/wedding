@@ -16,7 +16,7 @@
             <!--Menu-->
             <section class="menu">
                 <div class="navMenu">
-                    <p>ПРИГЛАШЕНИЕ</p>
+                    <a class="navMenuTitle" href=# id="begin">ПРИГЛАШЕНИЕ</a>
                 </div>
                 <div class="iconsBlock">
                     <div class="musciBlock">
@@ -27,14 +27,14 @@
                     </div>
                     <div class="burgerMenu">
                         <nav class="burgerMenu-items">
-                            <ul>
-                              <li><a href="#">Приглашение</a></li>
-                              <li><a href="#">Карта</a></li>
-                              <li><a href="#">Программа дня</a></li>
-                              <li><a href="#">Дресс-код</a></li>
-                              <li><a href="#">Таймер</a></li>
-                              <li><a href="#">Организатор</a></li>
-                              <li><a href="#">Обратная связь</a></li>
+                            <ul class="burgerMenu-itemsText">
+                              <li><a href="#invite">Приглашение</a></li>
+                              <li><a href="#map">Карта</a></li>
+                              <li><a href="#program">Программа дня</a></li>
+                              <li><a href="#dress">Дресс-код</a></li>
+                              <li><a href="#timer">Таймер</a></li>
+                              <li><a href="#manager">Организатор</a></li>
+                              <li><a href="#form">Обратная связь</a></li>
                             </ul>
                           </nav>
                           <div class="burgerMenu-icons">
@@ -65,7 +65,7 @@
             </section>
             <!--Окончание New Era-->
             <!--Invitation-->
-            <section class="invitation">
+            <section id="invite" class="invitation">
                 <img class="invitationBackgroundImage" src="./assets/images/flowersRight.png" alt="image">
                 <img class="invitationBackgroundImage invitationFlowers" src="./assets/images/endBlock.png" alt="image">
                 <p class="invitationTitle">Дорогие друзья и родные!</p>
@@ -134,7 +134,7 @@
             </section>
             <!--Окончание Calender-->
             <!--Map Блок-->
-            <section class="mapBlock">
+            <section id="map" class="mapBlock">
                 <p class="calenderTitle">Как добраться</p>
                 <p class="mapText">Для вашего удобства мы подготовили карту. Надеемся, что вы легко найдете место проведения свадьбы и порадуете нас своим пристутствием!</p>
                 <div class="mapSection">
@@ -143,7 +143,7 @@
             </section>
             <!--Окончание Map Блок-->
             <!--Programm Block-->
-            <section class="programmBlock">
+            <section id="program" class="programmBlock">
                 <img class="programmBlockFlowers" src="./assets/images/flowers.png" alt="flowers">
                 <hr class="programmBlockLine">
                 <p class="programmBlockTitle">Программа дня</p>
@@ -192,7 +192,7 @@
                 <img class="programmBlockFlowersColor" src="./assets/images/flowers.png" alt="flowers">
             </section>
             <!--Style Блок-->
-            <section class="style">
+            <section id="dress" class="style">
                 <p class="styleTitle">Дресс-код</p>
                 <p class="styleText">Нам будет очень приятно, если Вы поддержите черно-белый классический стиль в своих нарядах</p>
                 <div class="styleIconsBlock">
@@ -223,7 +223,7 @@
             </section>
             <!--Окончание HappyWait-->
             <!--Timer Блок-->
-            <section class="timerBlock">
+            <section id="timer" class="timerBlock">
                     <div class="timer">
                         <p class="timerDate">15 июля 2023</p>
                         <span class="timerText">до свадьбы осталось</span>
@@ -249,7 +249,7 @@
             </section>
             <!--Окончание Timer Блок-->
             <!--Wedding manager Блок-->
-            <section class="weddingManagerBlock">
+            <section id="manager" class="weddingManagerBlock">
                 <img class="weddingManagerBackground" src="./assets/images/flowers.png" alt="flowers">
                     <hr class="weddingManagerBlockLine">
                     <p class="weddingManagerTitle">Свадебный организатор</p>
@@ -260,7 +260,7 @@
             </section>
             <!--Окончание Wedding manager Блок-->
             <!--Form Block-->
-            <section class="formBlock">
+            <section id="form" class="formBlock">
                 <p class="formTitleText">Подтвердите, пожалуйста, своё пристутсвие на торжестве!</p>
                 <p class="formTitleText responceDateText">Будем ждать ответ до 01.06.2023 г.</p>
                 <i class="fa fa-angle-double-down arrowDown" aria-hidden="true"></i>
@@ -276,11 +276,11 @@
                     <div class="choiceOption">
                         <label for="choice">Присутствие:</label>
                         <div>
-                            <input type="radio" id="choiceYes" name="choiceYes">
+                            <input type="radio" id="choiceYes" name="choice" value="Yes">
                             <label class="choiceLabel" for="choicePresense">Я (мы) с удовольствием приду (придем)</label>
                         </div>
                         <div>
-                            <input type="radio" id="choiceNo" name="choiceNo">
+                            <input type="radio" id="choiceNo" name="choice" value="No">
                         <label class="choiceLabel" for="choicePresense">К сожалению, не смогу (не сможем) присутствовать</label>
                         </div>
                     </div>
