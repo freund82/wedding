@@ -204,7 +204,7 @@ li>a{
 
 .mainBlockOutline{
     position:absolute;
-    top:28%;
+    top:27%;
     left:7%;
     width:34rem;
     height:34rem;
@@ -921,10 +921,9 @@ li>a{
     border-bottom:0.1rem solid #000;
     font-family: var(--main-text-font-family);
     font-size:1.6rem;
-    margin-bottom:4rem;
 }
 
-#name{
+#nameText{
     width:35rem;
     height:6rem;
     outline:none;
@@ -934,13 +933,13 @@ li>a{
     font-family: var(--main-text-font-family);
     font-size:1.6rem;
     margin-top:0.5rem;
-    margin-bottom:3rem;
 }
 
 .choiceOption{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 3rem;
 }
 
 #choiceYes{
@@ -956,6 +955,22 @@ li>a{
 
 .choiceLabel{
     font-size:1.2rem;
+}
+
+.error{
+    color:#F15B4D;
+    font-size:1.2rem;
+}
+
+.errorBlock{
+    width:100%;
+    margin-top:3rem;
+    color:#fff;
+    background-color:#F15B4D;
+    font-size:1.6rem;
+    line-height:1.45;
+    padding:2rem 1rem;
+    text-align:center;
 }
 
 #btn{
