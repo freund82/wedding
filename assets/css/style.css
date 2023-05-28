@@ -283,7 +283,7 @@ li>a{
 .arrowTop{
     font-size:2rem;
     position:absolute;
-    bottom:3%;
+    bottom:0;
     left:50%;
     transform:translateX(-50%);
     z-index:1000;
@@ -980,7 +980,8 @@ li>a{
     font-family: var(--main-text-font-family);
     outline:none;
     border:none;
-    background-color:#B5CCAC;
+    background-color:#b3ccab;
+    color:#000;
     margin-top:4rem;
     margin-bottom:3rem;
     font-size:1.6rem;
