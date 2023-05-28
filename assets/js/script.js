@@ -90,23 +90,29 @@ var btn=document.querySelector("#btn")
 
 var choiceBlock=document.querySelector(".choiceOption")
 
+var error=false
+
 btn.addEventListener("click", function(event){
     event.preventDefault()
     if(!surname.value){
     surname.style.padding="5px 5px"
     surname.style.border="1px solid #F15B4D"
     surname.insertAdjacentHTML("afterend", `<p class="error">Please, fill in all mandatory fields/Пожалуйста, заполните все обязательные поля</p>`)
-    btn.insertAdjacentHTML("beforebegin", `<p class="errorBlock">Please, fill in all mandatory fields/Пожалуйста, заполните все обязательные поля</p>`)
+    error=true
     }
     if(!nameText.value){
         nameText.style.padding="5px 5px"
         nameText.style.border="1px solid #F15B4D"
         nameText.insertAdjacentHTML("afterend", `<p class="error">Please, fill in all mandatory fields/Пожалуйста, заполните все обязательные поля</p>`)
+        error=true
         }
   if(!choiceYes.checked && !choiceNo.checked){
     choiceBlock.style.padding="5px 5px"
     choiceBlock.style.border="1px solid #F15B4D"
     choiceBlock.insertAdjacentHTML("afterend", `<p class="error">Please, fill in all mandatory fields/Пожалуйста, заполните все обязательные поля</p>`)
-    alert("Пожалуйста, заполните все обязательные поля")
+    error=true
   }
+
+  (error)?btn.insertAdjacentHTML("beforebegin", `<p class="errorBlock">Please, fill in all mandatory fields/Пожалуйста, заполните все обязательные поля</p>`):null
+
 })
